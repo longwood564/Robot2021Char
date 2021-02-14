@@ -55,6 +55,8 @@ import java.util.ArrayList;
 
 public class Robot extends TimedRobot {
 
+  // I'm pretty sure that this variable name is wrong. The edges per rev itself is 8192, and there
+  // are 4 edeges per cycle/pulse, so really this should be named COUNTS_PER_REV/CPR.
   static private double ENCODER_EDGES_PER_REV = 8192 / 4.;
   static private int PIDIDX = 0;
   static private int ENCODER_EPR = 8192;
