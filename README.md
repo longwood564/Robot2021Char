@@ -13,3 +13,5 @@ To generate a new project:
 - Click *Generate Project*.
 
 For using the project and analyzing the results, please see the FRC docs.
+
+To modify and run the generated code outside of the characterization tools, you must open the [`characterization-project`](characterization-project) subdirectory in VSCode, such that `build.gradle` is on the root, or else WPILib will function correctly.
