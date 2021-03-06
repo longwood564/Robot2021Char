@@ -1,7 +1,7 @@
 # Project Type: Drivetrain
 # Team Number: 564
 # Unit Type: Meters
-# Units per Rotation: 0.00023377867207377169 (Calculated by robot code)
+# Units per Rotation: 0.4787787204070844 (Calculated by robot code)
 # Control Type: CTRE
 {
     # Ports for motors
