@@ -1,6 +1,8 @@
 # Robot2021 Characterization
-
 This repository contains the configuration and generated robot code for [Robot Characterization](https://docs.wpilib.org/en/stable/docs/software/wpilib-tools/robot-characterization/index.html), for our 2020/2021 robot.
+
+![Graphs produced from characterization.](linear-graphs-20210306.png)
+
 
 ## Usage
 To generate a new project:
