@@ -47,6 +47,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.VictorSP;
+import edu.wpi.first.wpilibj.CounterBase.EncodingType;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -119,8 +120,9 @@ public class Robot extends TimedRobot {
       case RIGHT:
         // set right side methods = encoder methods
 
-        encoder = new Encoder(2, 3);
-        encoder.setReverseDirection(true);
+
+        encoder = new Encoder(2, 3, true, EncodingType.k1X);
+        encoder.setSamplesToAverage(10);
 
         encoder.setDistancePerPulse(encoderConstant);
         rightEncoderPosition = encoder::getDistance;
@@ -128,8 +130,8 @@ public class Robot extends TimedRobot {
 
         break;
       case LEFT:
-        encoder = new Encoder(0, 1);
-        encoder.setReverseDirection(false);
+        encoder = new Encoder(0, 1, false, EncodingType.k1X);
+        encoder.setSamplesToAverage(10);
         encoder.setDistancePerPulse(encoderConstant);
         leftEncoderPosition = encoder::getDistance;
         leftEncoderRate = encoder::getRate;
